@@ -4,8 +4,6 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	margin: 0;
-	padding: 2rem;
 	background: url("https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6ebe78cb765815fdc628c5620ed0c6ac.png")
 			no-repeat center / cover,
 		#f0f2f5;
@@ -14,8 +12,8 @@
 }
 
 h1 {
-	font-size: 1.8rem;
-	margin-bottom: 1rem;
+	font-size: 25px;
+	margin: 25px 0 10px 0;
 	color: #1890ff;
 }
 
@@ -26,4 +24,22 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8d8d8f0;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

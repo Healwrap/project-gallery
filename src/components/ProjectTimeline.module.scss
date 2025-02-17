@@ -1,13 +1,18 @@
 .tagContainer {
-	margin-bottom: 2rem;
+  position: relative;
+	margin-bottom: 10px;
+  padding: 5px 0;
+  max-width: 80%;
+  overflow-x: auto;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-wrap: nowrap;
+
   .tag {
+    position: relative;
     cursor: pointer;
-    margin: 0.5em;
-    padding: 0.5em 1em;
-    border-radius: 4px;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 999px;
     transition: background-color 0.3s, color 0.3s;
   
     &:hover {
@@ -26,5 +31,5 @@
 .timelineContainer {
 	width: 100%;
 	max-width: 800px;
-	padding: 0 1rem;
+	padding: 0 10px;
 }

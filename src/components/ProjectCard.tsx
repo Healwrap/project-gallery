@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Carousel, Tag } from "antd";
+import { Card, Carousel, Tag, Image } from "antd";
 import styles from "./ProjectCard.module.scss";
 
 interface ProjectCardProps {
@@ -7,6 +7,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+	const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 	return (
 		<div className={styles.cardContainer}>
 			<Card
@@ -54,10 +55,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 						>
 							{project.imgs.map((img, index) => (
 								<div className={styles.carouselSlide} key={index}>
-									<img
+									<Image
 										src={img}
 										alt={`Screenshot ${index + 1}`}
 										className={styles.carouselImage}
+										preview={isMobile}
 									/>
 								</div>
 							))}
