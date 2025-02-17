@@ -1,0 +1,48 @@
+.cardContainer {
+
+	.cardTimes {
+		font-size: 0.9rem;
+		color: #666;
+		margin-bottom: 0.5rem;
+	}
+	.carouselContainer {
+		margin: 1rem auto;
+		border: 1px solid #00000010;
+	
+	
+		.carouselSlide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		.carouselImage {
+			max-width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+		// 全局覆盖 antd Carousel 内部指示点样式，使用 :global 确保样式生效
+		:global(.ant-carousel .slick-dots li button:before) {
+			font-size: 10px;
+			color: rgba(0, 0, 0, 0.8);
+		}
+	
+		:global(.ant-carousel .slick-dots li.slick-active button:before) {
+			color: rgba(0, 0, 0, 1);
+		}
+	
+		:global(.slick-prev),
+		:global(.slick-next) {
+			display: flex !important;
+			padding: 15px;
+			align-items: center;
+			justify-content: center;
+			border-radius: 999px;
+			background-color: #1890ff;
+			&::after {
+				top: initial !important;
+				inset-inline-start: initial !important;
+			}
+		}
+	}
+}

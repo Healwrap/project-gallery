@@ -1,0 +1,30 @@
+.tagContainer {
+	margin-bottom: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  .tag {
+    cursor: pointer;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  
+    &:hover {
+      background-color: #e6f7ff;
+      color: #1890ff;
+    }
+  }
+  .active {
+    background-color: #1890ff;
+    color: #fff;
+  }
+}
+
+
+
+.timelineContainer {
+	width: 100%;
+	max-width: 800px;
+	padding: 0 1rem;
+}

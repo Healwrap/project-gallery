@@ -1,0 +1,29 @@
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 2rem;
+	background: url("https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/6ebe78cb765815fdc628c5620ed0c6ac.png")
+			no-repeat center / cover,
+		#f0f2f5;
+	position: relative;
+	padding-bottom: 40px;
+}
+
+h1 {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+	color: #1890ff;
+}
+
+a {
+	color: #1890ff;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
