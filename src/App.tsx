@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import ProjectTimeline from "./components/ProjectTimeline";
 import Footer from "./components/Footer";
+import GithubBanner from "./components/GithubBanner";
 import { projects as projectData } from "./projects";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
 	return (
 		<div className="App">
+			<GithubBanner />
 			<h1>个人项目汇总</h1>
 			<ProjectTimeline projects={projects} />
 			<Footer />
