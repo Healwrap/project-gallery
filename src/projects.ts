@@ -1,10 +1,37 @@
+import { ProjectStatus } from "./const";
+
 export const projects: Project[] = [
 	{
 		name: "仿 Arco Design Vue组件库",
-		stacks: ["Vue3", "TypeScript", "Sass"],
+		status: ProjectStatus.inprogress,
+		stacks: [
+			"Vue3",
+			"TypeScript",
+			"Vite",
+			"Vitest",
+			"StoryBook",
+			"pnpm",
+			"monorepo",
+			"Sass",
+		],
 		link: "https://arch-desgin.github.io/arch-ui-vue",
 		git: "https://github.com/arch-desgin/arch-ui-vue",
-		desc: "Arch UI Components Library，类 Arco Design UI 库，使用 Vue3 Setup + TS + Sass 技术栈构建。组件库能够广泛覆盖 Arco Design Vue 的功能，并且与 Arco Design Vue 的 API 兼容。提供简洁明了的 API 和组件结构，使开发人员能够快速上手并高效构建界面，减少开发时间和工作量。部分组件兼容多种开发范式。在线文档包含详细的组件文档和示例，以展示组件库的功能和使用方法。",
+		desc: `<ul>
+    <li>
+        <strong>描述：</strong>
+        <ul>
+            <li>基于Vue3、TypeScript、Vite、Vitest、StoryBook、pnpm、monorepo等技术栈开发的组件库</li>
+        </ul>
+    </li>
+    <li>
+        <strong>项目亮点：</strong>
+        <ul>
+            <li>搭建项目：使用pnpm workspace搭建monorepo，方便组件开发的同时实时预览调试，通过根据环境切换package.json配置，实现开发过程无需build即可预览</li>
+            <li>打包优化：组件分包，CSS拆分，使用外置依赖优化打包体积</li>
+            <li>命令式组件生成器：编写组件生成命令，降低开发工作量</li>
+        </ul>
+    </li>
+</ul>`,
 		imgs: [
 			"https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/79d7a9a120d0a8ee7938e6d0a4907e39.png",
 			"https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/7729f62825b40b85fe1426a975449e8b.png",
@@ -17,6 +44,7 @@ export const projects: Project[] = [
 	},
 	{
 		name: "仿 axios 项目",
+		status: ProjectStatus.paused,
 		stacks: [
 			"JavaScript",
 			"TypeScript",
@@ -34,12 +62,13 @@ export const projects: Project[] = [
 		desc: "本项目是一个关于 仿axios 的项目，包含多个包及配置文件。使用了 Rollup 进行构建，有丰富的开发和构建脚本，如清理、构建、发布等。使用 ESLint 和 Prettier 进行代码规范和格式化，Husky 进行 Git 钩子管理。部分子项目使用了 Vite 进行开发，并且依赖 React 等相关技术栈。",
 		imgs: [],
 		category: ["前端", "练手基建Demo"],
-		createTime: "2024-11-17",
-		updateTime: "2024-07-21",
+		createTime: "2024-07-21",
+		updateTime: "2024-11-17",
 		enable: true,
 	},
 	{
 		name: "常青招聘",
+		status: ProjectStatus.maintained,
 		stacks: [
 			"Vue3",
 			"TypeScript",
@@ -57,7 +86,31 @@ export const projects: Project[] = [
 		],
 		link: "https://eh.healwrap.cn/",
 		git: "https://github.com/evergreen-recruitment/frontend",
-		desc: "本项目为服创 A15 赛题的前端代码，力求前端页面的精致和优雅，保证用户具有优秀的体验。一改传统招聘网站简陋的页面，加入了大量新颖元素如分析简历、知识图谱、技能分析、技术栈分析、相关搜索、大数据算法推荐等。使用先进的前端技术栈，有严谨的代码规范和样式统一性，包括 Git 提交信息的规范和控制，并使用 AliyunFLow 进行 CI/CD，页面使用统一的主题色和圆角，有自适应的主题色和暗亮色模式。",
+		desc: `<ul>
+  <li>
+    <strong>描述：</strong>
+    <ul>
+      <li>
+        基于 Vue3 的在线招聘平台。实现用户端界面和公司端管理界面；功能包含：查找岗位、查找公司、查看岗位详情、管理用户信息、管理简历、编辑在线简历等功能。
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>技术栈：</strong>
+    <ul>
+      <li>Vue3、Vue Router、Ant Design Vue、TypeScript、Tailwind CSS、Alova、Vite5</li>
+    </ul>
+  </li>
+  <li>
+    <strong>项目亮点：</strong>
+    <ul>
+      <li>系统架构：工程模板为通用项目模板；项目使用 Tailwind CSS；登录验证使用 Cookie 方案。</li>
+      <li>代码优化：页面需要在不同位置请求接口，而 Vue SFC 一般只能在页面初始化时统一请求所有接口。编写 V-Scroll 指令，实现在滚动到网页指定位置时请求接口；由于需要编写复杂组件，使用 Vue JSX，实现单文件中可编写复杂页面。</li>
+      <li>性能优化：网页使用大量图片，使用懒加载进行优化；使用 gzip 压缩加快网页加载；使用 HTTP2 协议提升网站的性能和安全性。</li>
+    </ul>
+  </li>
+</ul>
+`,
 		imgs: [
 			"https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/3ba365b4526aa6f3e7f14575750cadfa.png",
 			"https://picgo-img-repo.oss-cn-beijing.aliyuncs.com/img/4fe6668839f63f3f5ee5422272998bbf.png",
@@ -72,7 +125,48 @@ export const projects: Project[] = [
 		enable: true,
 	},
 	{
+		name: "简储云盘",
+		status: ProjectStatus.inprogress,
+		stacks: [
+			"React18",
+			"MUI",
+			"React Router",
+			"Zustand",
+			"Tailwind CSS",
+			"Vite5",
+			"TypeScript",
+			"Axios",
+		],
+		link: "",
+		git: "https://github.com/Healwrap/hp-drive-frontend",
+		desc: `<ul>
+		<li>
+		<strong>描述：</strong>
+		<ul>
+			<li>基于React18、Material Design UI、Zustand等技术栈开发的现代的、功能全面的云盘项目，支持
+			上传文件/文件夹、分享文件、回收站、隐藏空间、AI助手等功能。同时也适配移动端</li>
+		</ul>
+		</li>
+		<li>
+		<strong>项目亮点：</strong>
+		<ul>
+		<li>抽离核心上传功能为单独的NPM包并发布，其中包含重复文件秒传、大文件分片断点续传、文件夹上
+传下载、上传任务队列管理等等核心功能。</li>
+<li>配置 Input 元素支持单/多文件上传，文件夹上传；通过ondrop事件支持拖拽文件夹上传。</li>
+<li>大文件上传使用分块上传，对于处理大量文件的场景，使用了Web Worker加快处理。</li>
+<li>封装类控制上传任务开始暂停取消，创建和管理上传任务队列，处理上传文件时的并发请求。</li>
+		</ul>
+		</li>
+		</ul>`,
+		imgs: [],
+		category: ["前端", "练手业务Demo"],
+		createTime: "2024-07-01",
+		updateTime: "2024-08-01",
+		enable: true,
+	},
+	{
 		name: "HealWrap · 愈屋",
+		status: ProjectStatus.archived,
 		stacks: [
 			"Vue",
 			"Vite",
